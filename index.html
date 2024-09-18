@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="com">medilop.com</title>
+    <title class="com">medipol.com</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -14,7 +14,7 @@
         <div style="margin-right: auto; display: flex; align-items: center;">
             <img src="img/MEDILOP.jpg" alt="Logo" style="height: 50px; width: 50px; border-radius: 50%; margin-right: 10px;">
             <h1 style="font-weight: bolder; margin: 0;">Medi</h1>
-            <h1 style="font-weight: bolder; color: grey; margin: 0; margin-right: 5px;">lop</h1>
+            <h1 style="font-weight: bolder; color: grey; margin: 0; margin-right: 5px;">pol</h1>
         </div>
         
         
@@ -104,14 +104,28 @@
                 <div style="flex-grow: 0.1;">
                     <button class="open-popup" style="background-color: black; color: white;">Book Now</button>
                 </div>
-                <a href="https://youtu.be/J0n4ap-SWes">
-                <div class="hero-buttons" style="color: black;">
-                    <button class="play-button" style="width: 40px; height: 40px; border-radius: 50%; background-color: grey;">
-                        <i class="fas fa-play"></i>
-                    </button>
-                    Play Video
+                <a href="javascript:void(0);" id="openVideoModal">
+                    <div class="hero-buttons" style="color: black;">
+                        <button class="play-button" style="width: 40px; height: 40px; border-radius: 50%; background-color: grey;">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        Play Video
+                    </div>
+                </a>
+                
+                <!-- Modal Structure -->
+                <div id="videoModal" class="modal" style="display: none;">
+                    <div class="modal-content" style="position: relative; width: 80%; max-width: 800px; margin: auto; padding: 20px; background-color: white;">
+                        <span class="close" style="position: absolute; top: 10px; right: 20px; font-size: 24px; cursor: pointer;">&times;</span>
+                        
+                        <!-- Video Embed -->
+                        <video id="modalVideo" width="100%" controls>
+                            <source src="vid/Medipol Mega University Hospital Istanbul Turkey - FlyMedi.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-            </a>
+                
             </div>
         </div>
         <div class="img-container" style="flex: 1 1 50%; display: flex;">
@@ -120,21 +134,21 @@
     </div>
 
 
-    <div class="wrapper" style="display: flex; justify-content: center; align-items: center;  width: 100%; margin: 0; padding: 0;">
-        <div id="counter" class="flex-container" style="background-color: black; color: white; display: flex; align-items: center; justify-content: center; max-width: 100%; width: 1000px; padding: 20px; box-sizing: border-box;">
-            <div class="container" style="flex-grow: 1; border-right: 3px solid grey; padding: 10px; text-align: center;">
+    <div class="wrapper" style="display: flex; justify-content: center; align-items: center; ; margin: 0; padding: 0;box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex-wrap: wrap;">
+        <div id="counter" class="flex-container" style="background-color: black; color: white; display: flex; align-items: center; justify-content: center; max-width: 100%; width: 1000px; padding: 20px; box-sizing: border-box; flex-wrap: wrap;">
+            <div class="container" style="flex-grow: 1; border: 3px solid grey; padding: 10px; text-align: center; flex: 1 1 100px;  margin: 5px;">
                 <h1>95%</h1>
                 <p>success rates</p>
             </div>
-            <div class="container" style="flex-grow: 1; border-right: 3px solid grey; padding: 10px; text-align: center;">
+            <div class="container" style="flex-grow: 1; border: 3px solid grey; padding: 10px; text-align: center; flex: 1 1 100px;  margin: 5px;">
                 <h1>1,000+</h1>
                 <p>facilities</p>
             </div>
-            <div class="container" style="flex-grow: 1; border-right: 3px solid grey; padding: 10px; text-align: center;">
+            <div class="container" style="flex-grow: 1; border: 3px solid grey; padding: 10px; text-align: center; flex: 1 1 100px;  margin: 5px;">
                 <h1>3,000+</h1>
                 <p>doctors</p>
             </div>
-            <div class="container" style="flex-grow: 1; padding: 10px; text-align: center;">
+            <div class="container" style="flex-grow: 1; padding: 10px; text-align: center; flex: 1 1 100px; border: 3px solid grey; margin: 5px;">
                 <h1>100%</h1>
                 <p>reliable</p>
             </div>
@@ -152,25 +166,25 @@
         </div>
     </div>
     
-    <div class="wrapper" style="display: flex; justify-content: center; align-items: center;">
-        
-        <div class="flex-container" style="color: white; align-items: center; max-height: 200px; max-width: fit-content; margin: 50px; justify-content: center;">
-            <div class="container" style="flex-grow: 30; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
+    <div class="wrapper" style="display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 50px; flex-wrap: wrap; height: auto;">
+    
+        <div id="counter" class="flex-container" style="display: flex; color: white; margin: 30px; align-items: center; justify-content: center; flex-wrap: wrap;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin: 10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
                 <img src="img/image2.jpg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
                 <h4>All Specialist</h4>
                 <p></p>
             </div>
-            <div class="container" style="flex-grow: 30; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin: 10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
                 <img src="img/image3.png" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
                 <h5>Private & Secure</h5>
                 <p></p>
             </div>
-            <div class="container" style="flex-grow: 30; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin: 10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
                 <img src="img/image4.jpeg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
                 <h4>Million Customers</h4>
                 <p></p>
             </div>
-            <div class="container" style="flex-grow: 30; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin:  10px; display: flex; flex-direction: column; height: 170px; align-items: center; padding: 10px;">
                 <img src="img/image5.jpg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
                 <h4>Chatbot Support</h4>
                 <p></p>
@@ -178,71 +192,60 @@
         </div>
     </div>
     
-    <div class="wrapper" style="display: flex; justify-content: center; align-items: center;">
+    <div class="wrapper" style="display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 50px; flex-wrap: wrap; height: auto;">
     
-        <div id="counter" class="flex-container" style="display: flex; color: white; margin: 50px; align-items: center; max-height: 130px; max-width: fit-content; justify-content: center;">
-            <div class="container" style="flex-grow: 30; height: 130px; width: 130px; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <div id="counter" class="flex-container" style="display: flex; color: white; margin: 0px; align-items: center; justify-content: center; flex-wrap: wrap;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <img src="img/images6.jpeg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
-                <h5>Baby Care</h5>
+                <h5>Child care</h5>
             </div>
-            <div class="container" style="flex-grow: 30; height: 130px; width: 130px; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <img src="img/images7.jpeg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
-                <h5>Stomach</h5>
+                <h5>Abdomen problems</h5>
             </div>
-            <div class="container" style="flex-grow: 30; height: 130px; width: 130px; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin:  10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <img src="img/image8.jpeg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
                 <h5>Psychiatry</h5>
             </div>
-            <div class="container" style="flex-grow: 30; height: 130px; width: 130px; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <img src="img/image9.jpeg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
                 <h5>Urology</h5>
             </div>
-            <div class="container" style="flex-grow: 30; height: 130px; width: 130px; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin:  10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <img src="img/image10.jpeg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
                 <h5>Dermatology</h5>
             </div>
-            <div class="container" style="flex-grow: 30; height: 130px; width: 130px; background-color: grey; margin: 0 10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div class="container" style="height: 130px; width: 130px; background-color: grey; margin:  10px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
                 <img src="img/image11.jpeg" alt="image loading......" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
-                <h6>Infectious Diseases</h6>
+                <h6>Diseases</h6>
             </div>
         </div>
     </div>
     
+   <div  class="flex-container">
     <p style="margin: auto; margin-left: 50px; font-weight: bold;">Are You Looking For:</p>
-    
-     <div class="wrapper" 
-     style="display: flex;
-     justify-content: center;
-     align-items: center;">
 
-        <div id="counter" 
-            class="flex-container" 
-            style="
-            color: white; 
-            margin: 50px;
-            align-items: center;
-            
-            max-width:200px;
-            box-align: center;
-            justify-self: center;
-            justify-content: center;">r
-                <div class="container"  style="flex-grow: 30; height: 80px; width: 130px; justify-content: center; background-color: grey; margin: 0 10px;">
+    </div>
+    <div class="wrapper" style="display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 50px; flex-wrap: wrap; height: auto;">
+    
+        <div id="counter" class="flex-container" style="display: flex; color: white; margin: 30px; align-items: center; justify-content: center; flex-wrap: wrap;">
+                <div class="container"  style="height: 130px; width: 130px;; justify-content: center; background-color: grey; margin: 0 10px;">
                    
                     <h5 style="color: black; font-weight: bold;"> Doctors</h5>
                     <p>Best Doctors in the world</p>
                     
                 </div>
-                <div class="container"  style="flex-grow: 30; height: 80px; width: 130px; background-color: grey; margin: 0 10px;">
+                <div class="container"  style="height: 130px; width: 130px; background-color: grey; margin:  10px; border-radius: 10px;">
                     
                     <h5  style="color: black; font-weight: bold;">Consult</h5>
                     <p>Consult our doctors for medical assistance </p>
                 </div>
-                <div class="container"  style="flex-grow: 30; height: 80px; width: 130px;  background-color: grey; margin: 0 10px;">
+                <div class="container"  style="height: 130px; width: 130px;   background-color: grey; margin: 10px;">
                    
                     <h5  style="color: black; font-weight: bold;">Phamacy</h5>
                     <p>Our phamacies are all over the world</p>
                 </div>    
-                <div class="container"  style="flex-grow: 30; height: 80px; width: 130px; background-color: grey; margin: 0 10px;">
+                <div class="container"  style="height: 130px; width: 130px; background-color: grey; margin:  10px;">
                    
                     <h5  style="color: black; font-weight: bold;">Diagnostics</h5>
                     <p>We do all kinds of Diagnostics</p>
@@ -260,8 +263,9 @@
         </div>
     </div>
     
-    <div class="wrapper" style="display: flex; justify-content: center; align-items: flex-start; margin-bottom: 50px;">
-        <div id="counter" class="flex-container" style="display: flex; justify-content: space-between; align-items: stretch; max-width: 1200px; margin: 0; padding: 10px; box-sizing: border-box; width: 100%;">
+    <div class="wrapper" style="display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 50px; flex-wrap: wrap; height: auto;">
+    
+        <div id="counter" class="flex-container" style="display: flex; color: white; margin: 30px; align-items: center; justify-content: center; flex-wrap: wrap;">
             <div style="flex: 1; display: flex; flex-direction: column; align-items: center; margin: 10px;">
                 <div class="container" style="min-height: 150px; min-width: 130px; padding: 10px; background-color: grey; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
                     <img src="img/alex.jpg" alt="Dr. Alex" style="height: 50px; width: 50px; border-radius: 50%; margin: 10px;">
@@ -302,20 +306,9 @@
     </div>
 </div>
 
-<div class="wrapper" 
-     style="display: flex;
-            justify-content: center;
-            align-items: flex-start; 
-            margin-bottom: 50px;"> 
-    <div id="counter" 
-         class="flex-container" 
-         style="display: flex; 
-                justify-content: space-between; 
-                align-items: stretch;
-                max-width: 100%; 
-                margin: 0; 
-                padding: 10px; 
-                box-sizing: border-box;">
+<div class="wrapper" style="display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 50px; flex-wrap: wrap; height: auto;">
+    
+    <div id="counter" class="flex-container" style="display: flex; color: white; margin: 30px; align-items: center; justify-content: center; flex-wrap: wrap;">
         
         <div style="flex: 1; 
                     display: flex;
@@ -404,10 +397,10 @@
                                   height: auto;
                                   text-align: center;">
         <div style="color: grey; font-weight: bold;">
-            <h1>Best Doctors</h1>   
+            <h1>Best services</h1>   
         </div>
         <div style="font-weight: bold;">
-            <h1> And Anywhere And Anytime</h1>
+            <h1> Anywhere And Anytime</h1>
         </div>
         <p style="max-width: 500px; margin: 0 auto;">
             We have the best doctors in the world. Our first priority is your health, 
@@ -417,7 +410,7 @@
         </p>
         <div class="flex-container" style="margin-top: 20px;">
             <div style="text-align: center;">
-                <button class="open-popup" style="background-color: black; color: white;">Find Doctor Now</button>
+                <button class="open-popup" style="background-color: black; color: white;">contact a doctor</button>
             </div>
         </div>
     </div>
@@ -439,7 +432,8 @@
             flex-wrap: wrap; 
             justify-content: center;
             align-items: center; 
-            padding: 20px;"> 
+            padding: 20px;
+            margin: 10px;"> 
     <div class="container img" style="flex: 1 1 50%; 
                                        display: flex; 
                                        justify-content: center; 
@@ -455,7 +449,8 @@
                                   max-width: 100%;
                                   max-height: 500px;
                                   height: auto;
-                                  text-align: center;">
+                                  text-align: center;
+                                  height: auto;">
         <div style="color: grey; font-weight: bold; margin-right: 5px;">
             <h1>Urgent</h1>   
         </div>
@@ -490,7 +485,8 @@
 <div class="wrapper" 
 style="display: flex;
 justify-content: center;
-align-items: center;">
+align-items: center;
+margin: 10px;">
 <div style="display: flex; flex-direction: row; align-items: center;">
                     <h4 style="font-weight: bolder; 
                     color: grey; 
@@ -507,21 +503,9 @@ align-items: center;">
                 </div>
 </div>
 
-<div class="wrapper" 
-     style="display: flex;
-            justify-content: center;
-            align-items: flex-start; 
-            margin-bottom: 50px;">
-    <div id="counter" 
-         class="flex-container" 
-         style="display: flex; 
-                justify-content: space-between; 
-                align-items: stretch;
-                width: 100%;
-                
-                margin: 0; 
-                padding: 10px; 
-                box-sizing: border-box;">
+<div class="wrapper" style="display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin: 50px; flex-wrap: wrap; height: auto;">
+    
+    <div id="counter" class="flex-container" style="display: flex; color: white; margin: 0px; align-items: center; justify-content: center; flex-wrap: wrap;">
         <div style="flex: 1; 
                     display: flex;
                     flex-direction: column;
@@ -576,7 +560,8 @@ align-items: center;">
             justify-content: center;
             align-items: flex-start; 
             margin-bottom: 50px;
-            width: 100%;">
+            width: 100%;
+            flex-wrap: wrap;">
     <div id="counter" 
          class="flex-container" 
          style="display: flex; 
@@ -586,18 +571,22 @@ align-items: center;">
                 background-color: rgb(184, 185, 186);
                 margin: 0; 
                 padding: 10px; 
-                box-sizing: border-box;">
+                box-sizing: border-box;
+                flex-wrap: wrap;">
         
         
         <div style="flex: 1; 
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    margin: 10px;">
+                    margin: 10px;
+                    flex: 1 1 300px;
+                   ">
             <div class="text-container" style="flex: 1;
                                                display: flex;
                                                flex-direction: row;
-                                               align-items: center;">
+                                               align-items: center; 
+                                               ">
                 <div style="display: flex; flex-direction: row; align-items: center;">
                     <h4 style="font-weight: bolder; 
                     color: grey; 
@@ -618,7 +607,8 @@ align-items: center;">
         
         <div class="button-container" style="margin: 10px; 
                                               display: flex; 
-                                              align-items: center;">
+                                              align-items: center;
+                                             ">
             <button class="sign-up-btn" style="background-color: black; color: white; padding: 10px 20px; border: none; cursor: pointer;">Submit Here</button>
         </div>
     </div>
@@ -629,24 +619,26 @@ align-items: center;">
             justify-content: center;
             align-items: flex-start; 
             margin-bottom: 50px;
-            width: 100%;">
+            flex-wrap: wrap;"> <!-- Added flex-wrap -->
+    
     <div id="counter" 
          class="flex-container" 
          style="display: flex; 
                 justify-content: space-between; 
                 align-items: center;
                 width: 100%;
-                
                 margin: 0; 
                 padding: 10px; 
-                box-sizing: border-box;">
+                box-sizing: border-box;
+                flex-wrap: wrap; 
+                flex-direction: row;">
         <div class="container" 
         style="display: flex; 
                flex-direction: column; 
-               width: 100%; 
+               
                margin: 10px; 
                align-items: center; 
-               padding: 10px; 
+               flex: 1 1 300px; margin: 10px; padding: 10px;
                box-sizing: border-box;">
        
        <div style="display: flex; align-items: center;">
@@ -657,7 +649,7 @@ align-items: center;">
            
            <div style="display: flex; flex-direction: row; align-items: center;">
                <h4 style="font-weight: bolder; margin: 0; ">Medi</h4>
-               <h4 style="font-weight: bolder; color: grey; margin: 0;">lop</h4>
+               <h4 style="font-weight: bolder; color: grey; margin: 0;">pol</h4>
            </div>
        </div>
        <div style="display: flex; align-items: center;">
@@ -735,6 +727,7 @@ align-items: center;">
         align-items: center;
         padding: 10px;
         box-sizing: border-box;
+        flex: 1 1 300px;
         ">
         <h1 style="font-weight: bolder;">
             Features
@@ -755,12 +748,13 @@ align-items: center;">
         align-items: center;
         padding: 10px;
         box-sizing: border-box;
+        flex: 1 1 300px;
         ">
         <h1 style="font-weight: bolder;">
             User
         </h1>
         <button class="login-btn" style="border: none; background-color: white;">
-            User Login
+            Login
         </button>
 
         <button class="sign-up-btn" style="border: none; color: black; background-color: white;">
@@ -771,7 +765,7 @@ align-items: center;">
     
         
         <button id="resetPasswordButton" style="border: none; background-color: white;">
-            Forget password
+            reset password
         </button>
     
         
@@ -812,7 +806,37 @@ align-items: center;">
     </div>
 </div>
 
-            <script src="main-js/main.js"></script>
+            <script src="main-js/main.js">
+                // Get the modal element
+var modal = document.getElementById("videoModal");
+var video = document.getElementById("modalVideo");
+
+// Get the button that opens the modal
+var btn = document.getElementById("openVideoModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    video.pause();  // Pause the video when the modal is closed
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        video.pause();  // Pause the video when the modal is closed
+    }
+}
+
+            </script>
         </div>
 </div>
 
